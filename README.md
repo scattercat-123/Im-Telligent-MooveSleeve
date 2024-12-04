@@ -1,7 +1,8 @@
 # Im-Telligent-MooveSleeve - https://im-telligent-1fcfd.web.app/
 MoodSleeve is an innovative wearable device that combines technology and emotional awareness. Using sensors like Galvanic Skin Response (GSR) and Electromyography (EMG), it monitors physiological changes in real-time and translates them into visual feedback, such as color changes or patterns. This makes it a dynamic and interactive tool for understanding emotions, managing stress, and even subtly expressing feelings to others without saying a word.
+https://www.youtube.com/watch?v=Fmnsh29Wvp0
 
-# How Cool is This?
+# How Cool is This? VERY FUNNY video I made my friend angry and checked the emotion readings!! - https://www.youtube.com/watch?v=Fmnsh29Wvp0
 Imagine you're wearing the MoodSleeve during a heated conversation. Someone starts getting upset or angry, and boom—the GSR and EMG sensors detect a drop in emotional stability or relaxation. As the tension rises, MoodSleeve’s display dims or shifts to colors like blue or gray, representing the decrease in calmness.
 
 # Here’s Why That’s Awesome:
