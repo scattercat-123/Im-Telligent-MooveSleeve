@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>MoodSleeves 101</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/moodsleves.css">
+</head>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="title"
+			style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">IM-Telligent</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="moodsleeve.html" class="active">MoodSleeves</a></li>
+				<li><a href="moodsleeve101.html">MoodSleeves 101</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div id="popup">
+				<div class="popup-content">
+					<button class="close-btn" onclick="closePopup()">×</button>
+					<h3 style="color: #000000;">Watch the MoodSleeve in Action!
+						And check <br> our emotion sensor readings when I slap my friend!
+					</h3>
+					<marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="10">
+						➡️ VERY FUNNY ➡️ VERY FUNNY ➡️ VERY FUNNY ➡️
+					</marquee>
+					<div class="video-container">
+						<iframe src="https://www.youtube.com/embed/Fmnsh29Wvp0" title="MoodSleeve Demo" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+						</iframe>
+					</div>
+				</div>
+			</div>
+			<div class="inner">
+				<h1 class="major">MoodSleeves</h1>
+				<div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+					<div class="sensor-container" onclick="toggleDropdown()">
+						<h2 style="color: #000000;">Real-Time Sensor Data</h2>
+						<div class="dropdown-content">
+							<h2>Temperature</h2>
+							<p class="value" id="temperature">22 &#8451;</p>
+							<h2>Humidity</h2>
+							<p class="value" id="humidity">10%</p>
+						</div>
+
+
+
+					</div>
+
+					<div class="settings-container">
+						<div id="mySidebar" class="sidebar">
+							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+							<br>
+							<button onclick="buttonChatbotClose()">Show Chatbot</button>
+							<button onclick="buttonMusicClose()">Show Music</button>
+							<button onclick="myFunction()">Show GSR Data</button>
+
+						</div>
+
+						<div id="main">
+							<button class="openbtn" onclick="openNav()">⚙️Open Settings</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="chat-container">
+			<div id="chat-box"></div>
+			<textarea id="user-input" placeholder="Type your message..."></textarea>
+			<button id="send-message" onclick="sendMessage()">Send</button>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="player" id="playerr">
+		<div class="details">
+			<div class="now-playing">PLAYING x OF y</div>
+			<div class="track-art"></div>
+			<div class="track-name">Track Name</div>
+			<div class="track-artist">Track Artist</div>
+		</div>
+
+		<!-- Define the section for displaying track buttons -->
+		<div class="buttons">
+			<div class="prev-track" onclick="prevTrack()">
+				<i class="fa fa-step-backward fa-2x"></i>
+			</div>
+			<div class="playpause-track" onclick="playpauseTrack()">
+				<i class="fa fa-play-circle fa-5x"></i>
+			</div>
+			<div class="next-track" onclick="nextTrack()">
+				<i class="fa fa-step-forward fa-2x"></i>
+			</div>
+		</div>
+
+		<!-- Define the section for displaying the seek slider-->
+		<div class="slider_container">
+			<div class="current-time">00:00</div>
+			<input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+			<div class="total-duration">00:00</div>
+		</div>
+
+		<!-- Define the section for displaying the volume slider-->
+		<div class="slider_container">
+			<i class="fa fa-volume-down"></i>
+			<input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+			<i class="fa fa-volume-up"></i>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; 2024 Im-Telligent. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">Atharv & Karna</a></li>
+				<li>Thanks to Dhanushree mam & Sandhya and Aajnya</li>
+			</ul>
+		</div>
+	</footer>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/moods.js"></script>
+	<script type="module" src="assets/js/firebase.js"></script>
+
+
